@@ -38,7 +38,7 @@
 	},
 	"scripts": {
 		"prepare": "simple-git-hooks",
-		"build": "pkgroll --minify",
+		"build": "(cd node_modules/type-flag; npm install; pnpm build); pkgroll --minify",
 		"lint": "eslint --cache .",
 		"type-check": "tsc --noEmit",
 		"test": "tsx tests",
@@ -54,7 +54,7 @@
 	},
 	"dependencies": {
 		"terminal-columns": "^1.4.1",
-		"type-flag": "^3.0.0"
+		"type-flag": "github:privatenumber/type-flag#eabee3f2f8c7e85b10452ef000710d753f09cc5f"
 	},
 	"devDependencies": {
 		"@pvtnbr/eslint-config": "^0.33.0",
